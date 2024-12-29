@@ -1,9 +1,8 @@
 import express from 'express';
-import { getPendingEmail, scheduleEmail, updateEmail } from '../controllers/emailController';
+import { getPendingEmail, scheduleEmail } from '../controllers/emailController';
 const router = express.Router();
 
 router.post('/schedule', scheduleEmail);
-router.post('/getmails', getPendingEmail);
-router.post('/update', updateEmail);
+router.get('/getmails', getPendingEmail);
 
 export default router;
